@@ -34,11 +34,30 @@ Union file systems (or UnionFS) are file systems that work through creating laye
 
 * $ sudo docker run ubuntu /bin/echo Hello, Docker!
 
-### 
+### Interactivity with Docker
 
-*  $ sudo docker ps - checks for running containers.
+*  $ sudo docker ps -> checks for running containers.
 
-* sudo docker run ‐i ‐t ubuntu /bin/bash - create one container and access its interactive shell
+* sudo docker run ‐i ‐t ubuntu /bin/bash -> create one container and access its interactive shell
 
 ‐i tells Docker that we want to have interactivity with the container, and the –t that we want to link to the container terminal. In then we inform the name of the image used, in the case of Ubuntu, and we pass the / bin / bash command as an argument.
 
+* sudo docker ps ‐a -> that means that we want to list all containers that have been initialized or paused.
+
+* sudo docker ps ‐qa -> return only the container ID
+
+* sudo docker stats abc123456789 -> informs at runtime, details on the level of resource consumption in the host machine, made by the containers.
+
+* sudo docker images
+
+* sudo docker rm abc123456789 - remove containers
+
+### Controlling containers
+
+* sudo docker run ‐it ‐‐name ex_nginx ubuntu
+
+* sudo docker commit bbb123456789 ubuntu/nginx
+
+* sudo docker run ‐it ‐‐rm ‐p 8080:80 ubuntu/nginx/bin/bash
+
+* sudo docker rmi 125675467253SS
