@@ -6,4 +6,8 @@
 
 [Working with volumes](volumes) - Volumes.
 
-[Network settings](network) - 
+[Network settings](network) - Configurations.
+
+[Docker Hub](hub) - Docker Hub.
+
+[Working with Docker](work) - Usage.  

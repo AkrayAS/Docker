@@ -1,0 +1,15 @@
+db:
+    image: postgres:9.3
+    volumes:
+    ‐ ~/.docker‐
+    volumes/blog/db/:/var/lib/postgresql/data/
+    expose:
+    ‐ '5123'
+app:
+    build: .
+    volumes:
+    ‐ .:/myapp
+    ports:
+    ‐ '8080:3000'
+    links:
+    ‐ db
